@@ -1,0 +1,36 @@
+# 系统文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE文件
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# 日志和缓存
+www/var/log/*
+www/var/cache/*
+!www/var/log/.gitkeep
+!www/var/cache/.gitkeep
+
+# 配置文件中的敏感信息（如果需要）
+# www/config.php
+# www/settings.php
+
+# 临时文件
+*.tmp
+*.log
+*.bak
+
+# 压缩包
+*.zip
+*.rar
+*.7z
+
+# 数据库备份
+*.sql
+*.db

@@ -1,0 +1,21 @@
+支持的服务器：Windows-server2003 以上  或者linux服务器
+
+空间支持：PHP+mysql （PHP5.4）
+
+支持子目录及子目录绑定域名（非虚拟目录）
+
+上传文件 网站目录指定www  访问安装即可
+
+
+
+
+1.怎么清理广告缓存
+http://help.zyiis.com/?action=help&id=55
+2.中易系统V9版win2012系统环境配置视频教程
+http://help.zyiis.com/?action=help&id=58
+3.怎么修改模板(v9版)
+http://help.zyiis.com/?action=help&id=56
+4.出现空白页的处理方法（500错误）
+http://help.zyiis.com/?action=help&id=52
+5.广告地址中填加会员或是网站ID
+http://help.zyiis.com/?action=help&id=53
