@@ -1,10 +1,13 @@
 <?php
 
-echo '(function() {' . "\r\n\t";
 if (preg_match('/(Googlebot|Msnbot|YodaoBot|Sosospider|Baiduspider|Sogou web spider|gosospider|Huaweisymantecspider|Gigabot|OutfoxBot)/i', $_SERVER['HTTP_USER_AGENT']) || ($_SERVER['HTTP_USER_AGENT'] == 'Mozilla/4.0')) {
 	header('HTTP/1.1 403 Forbidden');
 	exit();
 }
+
+header('Content-Type: application/javascript; charset=utf-8');
+
+echo '(function() {' . "\r\n\t";
 
 $zoneid = (int) $_GET['id'];
 
