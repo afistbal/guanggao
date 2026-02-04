@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+
+.banner-site{ width:100%;height:460px;background:url(../images/banner-site.png) no-repeat center 0;}
+	.problems{
+		width:1200px;
+		margin:0 auto;
+		}
+	.problems h4{
+		font-size:36px;
+		color:#0076ca;
+		text-align:center;
+		margin-top:60px;
+		}
+	.problems span{
+		font-weight:bold;
+		}
+	.problems p{
+		color:#747474;
+		text-align:center;
+		font-size:16px;
+		margin-top:10px;
+		}
+	.problems img{
+		margin:0 auto;
+		margin-top:40px;
+		}
+	.why{
+		margin-top:60px;
+		width:100%;
+		background:url(site_why_bg.png) bottom center no-repeat;
+		height:595px;
+		}
+	.date{
+		width:100%;
+		margin:0 auto;
+		}
+	.date h6{
+		text-align:center;
+		font-size:26px;
+		color:#434343;
+		font-weight:bold;
+		margin-top:40px;
+		}
+	.date p{
+		text-align:center;
+		font-size:18px;
+		color:#747474;
+		width:700px;
+		margin:0 auto;
+		margin-top:10px;
+		}
+	.date img{
+		margin:0 auto;
+		display:block;
+		}
+	.process{
+		width:100%;
+		margin:0 auto;
+		background:url(process_bg.png) bottom center no-repeat;
+		height:425px;
+		}
+	.process p{
+		font-size:36px;
+		color:#FFFFFF;
+		text-align:center;
+		font-weight:bold;
+		padding-top:80px;
+		}
+	.process_img{
+		width:936px;
+		height:120px;
+		background:url(process_img.png) center center no-repeat;
+		margin:0 auto;
+		margin-top:40px;
+		}
+	.jr{
+		width:100%;
+		margin:0 auto;
+		text-align:center;
+		margin-bottom:60px;
+		}
+	.jr h5{
+		font-size:32px;
+		color:#434343;
+		font-weight:bold;
+		margin-top:40px;
+		}
+	.jr p{
+		font-size:18px;
+		color:#747474;
+		margin-top:10px;
+		}
+	.jr a{
+		display:block;
+		width:210px;
+		line-height:58px;
+		background:#0076ca;
+		border-radius:6px;
+		text-align:center;
+		font-size:24px;
+		color:#FFFFFF;
+		margin:0 auto;
+		margin-top:20px;
+		}

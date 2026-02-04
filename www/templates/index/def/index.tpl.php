@@ -1,213 +1,198 @@
+<!DOCTYPE html>
+<html class="js flexbox canvas rgba backgroundsize borderradius boxshadow cssanimations csstransforms csstransforms3d csstransitions video audio svg" lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><?php echo $GLOBALS['C_ZYIIS']['sitename']?></title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="<?php echo SRC_TPL_DIR?>/images/icon_logo.png">
+    <link rel="icon" type="image/png" href="<?php echo SRC_TPL_DIR?>/images/icon_logo.png">
+    <link rel="stylesheet" href="<?php echo SRC_TPL_DIR?>/images/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo SRC_TPL_DIR?>/images/flexslider.css">
+    <link rel="stylesheet" href="<?php echo SRC_TPL_DIR?>/images/styles.css">
+    <link rel="stylesheet" href="<?php echo SRC_TPL_DIR?>/images/animate.min.css">
+
+<style>
+.my-btnStyle{position:fixed;bottom:10%;right:10%; z-index:9999}
+.my-btnStyle button{ width:62px; height:62px; border:none; background:rgba(255,100,69,0.6); border-radius:50% !important;}
+.my-btnStyle button img{ margin:0 auto;}
+.my-btnStyle .dropdown-menu img{ margin:5px; display:inline-block;}
+.my-btnStyle .dropdown-menu span{ line-height:50px;color:#3d4351;}
+.my-btnStyle .dropdown-menu li a{ text-decoration:none;}
+.my-btnStyle .dropdown-menu{ animation:.3s linear fadeIn; left:-58px;margin-bottom:10px;}
+.my-btnStyle h5{ font-size:18px;color:#3d4351;}
+.my-btnStyle button{ display:block; margin-bottom:10px; }
+.my-btnStyle .zhiding{ 
+    background:rgba(73,80,97,0.6);
+    outline: none;
+    border: none;
+    border-radius:50% !important;
+}
+.my-btnStyle .zhiding:hover{ background:rgba(73,80,97,1)}
+.my-btnStyle .zhiding:focus,
+.my-btnStyle .zhiding:active,
+.my-btnStyle .zhiding:focus-visible {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius:50% !important;
+}
+/* 移除 dropdown-toggle 按钮的置灰效果 */
+.my-btnStyle .dropdown-toggle {
+    outline: none;
+    border: none;
+    border-radius:50% !important;
+}
+.my-btnStyle .dropdown-toggle:hover {
+    background:rgba(255,100,69,0.8);
+}
+.my-btnStyle .dropdown-toggle:focus,
+.my-btnStyle .dropdown-toggle:active,
+.my-btnStyle .dropdown-toggle.active,
+.my-btnStyle .dropdown-toggle:focus-visible,
+.my-btnStyle.open .dropdown-toggle {
+    background:rgba(255,100,69,0.6) !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius:50% !important;
+}
+
+
+@keyframes fadeIn{
+  0%{ opacity:0; transform:translateX(-20px);}
+  100%{ opacity:1; transform:translateX(0px);}
+}
+
+</style>
+    
+<style type="text/css">.fancybox-margin{margin-right:0px;}</style><style>.fluidvids-elem{position:absolute;top:0px;left:0px;width:100%;height:100%;}.fluidvids{width:100%;position:relative;}</style></head>
+<body id="top">
 <?php if(!defined('IN_ZYADS')) exit(); 
 TPL::display('header'); ?>
-<title><?php echo $GLOBALS['C_ZYIIS']['sitename']?></title>
-<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:1px">
-  <tr>
-    <td bgcolor="#F7F6EF"><table width="960" height="340" border="0" align="center" cellpadding="0" cellspacing="0">
-        <tr>
-          <td width="660"><div id="slider">
-              <ul style="display:none;">
-                <li><img src="<?php echo SRC_TPL_DIR?>/images/slider_1.jpg" align="absmiddle" border="0" /></li>
-                <li><img src="<?php echo SRC_TPL_DIR?>/images/slider_2.jpg" align="absmiddle" border="0" /></li>
-                <li><img src="<?php echo SRC_TPL_DIR?>/images/slider_3.jpg" align="absmiddle" border="0" /></li>
-              </ul>
-              <a href="<?php echo url("index.register")?>" class="slider-reg"></a> </div></td>
-          <td width="285" valign="top"><form id="form1" name="form1" method="post" action="<?php echo url("index.postlogin")?>" onSubmit="return doLogin()">
-              <table width="100%" border="0" cellpadding="0" cellspacing="0"  class="login">
-                <tr>
-                  <td height="40" style="color:#785A3A;font-size:16px; font-weight:bold">登 入 <span class="error_span"></span></td>
-                </tr>
-                <tr>
-                  <td height="50"><input name="username" type="text"  class="user" id="username" /></td>
-                </tr>
-                <tr>
-                  <td height="50"><input name="password" type="password" class="pwd" id="password" /></td>
-                </tr>
-                <?php if ($GLOBALS ['C_ZYIIS']['login_check_code']=='1'){?>
-                <tr>
-                  <td height="50"><input name="checkcode" type="text" id="checkcode" style="width:120px; padding-left:8px" maxlength="4" />
-                    <img src="<?php echo url("index.codeimage")?>" align="absmiddle"  title= "看不清?请点击刷新验证码"  onclick="this.src='<?php echo url("index.codeimage?rand=")?>'+Math.random();"  style= "cursor:pointer;"/></td>
-                </tr>
-                <?php }?>
-                <tr>
-                  <td height="50"><input name="image3" type="image" src="<?php echo SRC_TPL_DIR?>/images/login_sb.jpg" align="absmiddle" border="0" style="width:104px; height:35px; border:0px" />
-                    <span style="margin-left:20px"><a href="<?php echo url("index.find_passwd")?>">忘记密码？</a></span></td>
-                </tr>
-                <tr>
-                  <td height="60"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td width="120" align="center">没有帐号？<a href="<?php echo url("index.register")?>" style=" color:#3399e0">立即注册</a></td>
-                        <td align="right">
-                        <?php if ($GLOBALS ['C_ZYIIS']['oauth_qq_app_id']){?>
-                        <a href="<?php echo url("oauth/qq.login")?>" title="腾讯QQ登录 "><img src="<?php echo SRC_TPL_DIR?>/images/qq_login1.png"  border="0" alt="腾讯QQ登录" /></a>
-                         <?php }?>
-                        </td>
-                        <td align="right">&nbsp;</td>
-                      </tr>
-                    </table></td>
-                </tr>
-              </table>
-            </form></td>
-        </tr>
-      </table></td>
-  </tr>
-</table>
-<table width="960" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:20px">
-  <tr>
-    <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-          <td width="70" height="25"><span class="title">计费形式</span></td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td class="title_td_1"></td>
-          <td class="title_td_2"></td>
-        </tr>
-      </table></td>
-    <td width="40">&nbsp;</td>
-    <td width="285"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-          <td width="70" height="25"><span class="title">联盟公告</span></td>
-          <td align="right"><a href="<?php echo url("index.article_list")?>">更多...</a></td>
-        </tr>
-        <tr>
-          <td class="title_td_1"></td>
-          <td class="title_td_2"></td>
-        </tr>
-      </table></td>
-  </tr>
-  <tr>
-    <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-          <td height="50"> 专注于网络广告的研究与发展，为客户提供各种形式的网络广告投放服务。</td>
-        </tr>
-        <tr>
-          <td><img src="<?php echo SRC_TPL_DIR?>/images/ad_type.jpg" /></td>
-        </tr>
-      </table></td>
-    <td>&nbsp;</td>
-    <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top:10px">
-        <?php 
-		//如只要公告"1",多个用“,”分开 效果"1,2,3",后面为要显示条数
-		$article = dr ( 'index/article.get_type_article' ,"1,2",6);
-		foreach((array)$article AS $a) {
-		?>
-        <tr>
-          <td width="15" height="30" class="red_dotted"></td>
-          <td><div style="width:200px; overflow:hidden;height: 20px;"> <a href="<?php echo url("index.article?id=".$a["articleid"])?>"><!--[
-            <?php  foreach ($GLOBALS['article_type'] AS $key=>$val){ if($a['type'] == $key  ){echo $val; /*substr($val,0,6);*/} }?>
-            ]--> 
-              
-              <font color="<?php echo $a['color']?>" >
-              <?php 
-			echo $a['top']=='2'?'[置顶] ':'';
-			echo $a["title"];
-			?>
-              </font> </a> </div></td>
-          <td><?php echo date("m-d",strtotime($a['addtime']));?></td>
-        </tr>
-        <?php }?>
-      </table></td>
-  </tr>
-  <tr>
-    <td height="10">&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td colspan="3"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-          <td width="200" height="25"><span class="title">广告类型（部分）</span></td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td class="title_td_1"></td>
-          <td class="title_td_2"></td>
-        </tr>
-      </table></td>
-  </tr>
-  <tr>
-    <td colspan="3"><table width="100%" border="0" cellpadding="0" style="margin-top:22px">
-        <tr>
-          <td align="center" valign="top"  class="box"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-              <tr>
-                <td height="30"><table width="200" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td height="40" class="box_tit">移动插屏广告(移动广告专用)</td>
-                    </tr>
-                  </table></td>
-              </tr>
-              <tr>
-                <td height="30"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td width="220" height="40" style="line-height:22px; padding:10px">插屏广告是一种新兴的广告形式，一般在网页中间或全屏形式插入广告，插屏广告采用了自动广告适配和缓存优化技术，用户可自己定义“全屏展示”“半屏展示”，点击率较高。</td>
-                      <td><img src="<?php echo SRC_TPL_DIR?>/images/cp.jpg" /></td>
-                    </tr>
-                  </table></td>
-              </tr>
-              <tr></tr>
-            </table></td>
-          <td align="center"  class="box"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-              <tr>
-                <td height="30"><table width="200" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td height="40" class="box_tit">移动通栏广告(移动广告专用)</td>
-                    </tr>
-                  </table></td>
-              </tr>
-              <tr>
-                <td height="30"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td width="220" height="40" style="line-height:22px; padding:10px">即横幅广告条，是在一个手机网站的顶部或是底部区域内固定展示广告，点击广告之后会有 跳转到手机网页、下载手机应用。</td>
-                      <td><img src="<?php echo SRC_TPL_DIR?>/images/banner.jpg" /></td>
-                    </tr>
-                  </table></td>
-              </tr>
-              <tr></tr>
-            </table></td>
-        </tr>
-      </table>
-      <table width="100%" border="0" cellpadding="0" style="margin-top:22px">
-        <tr>
-          <td align="center" valign="top"  class="box"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-              <tr>
-                <td height="30"><table width="200" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td height="40" class="box_tit">弹窗广告(通用)</td>
-                    </tr>
-                  </table></td>
-              </tr>
-              <tr>
-                <td height="30"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td width="220" height="40" style="line-height:22px; padding:10px">弹窗广告是指打开网站后自动弹出的广告， 弹窗广告是互联网上最古老也最常用的网络推广形式之一，广泛的应用于网站 、企业的产品快速推广和宣传。</td>
-                      <td><img src="<?php echo SRC_TPL_DIR?>/images/cpm.jpg" /></td>
-                    </tr>
-                  </table></td>
-              </tr>
-              <tr></tr>
-            </table></td>
-          <td align="center"  class="box"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-              <tr>
-                <td height="30"><table width="200" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td height="40" class="box_tit">标签云、图文混排(通用)</td>
-                    </tr>
-                  </table></td>
-              </tr>
-              <tr>
-                <td height="30"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td width="220" height="40" style="line-height:22px; padding:10px">标签云（Tag Cloud）是用以表示一个网站中的内容标签、关键字，按照字体的大小和颜色随机排列。图文混排是一种按文字和图片混排的广告形式，达到更好的展示效果。</td>
-                      <td><img src="<?php echo SRC_TPL_DIR?>/images/cp1.jpg" /></td>
-                    </tr>
-                  </table></td>
-              </tr>
-              <tr></tr>
-            </table></td>
-        </tr>
-      </table></td>
-  </tr>
-</table>
-<script src="<?php echo WEB_URL?>js/imgnum.js" type="text/javascript"></script>
-<?php TPL::display('footer');?>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="hero-content text-center">
+                        <h1>海森广告 · 一站式移动广告平台</h1>
+                        <p class="intro">丰富的广告模式提升用户的收益转化、最佳的流量变现方案(通栏、插屏、跳转)、丰富的网络广告<br>投放经验帮助品牌瞬间传递！</p>
+                        <a href="/index.php?e=index.register" class="btn btn-fill btn-large btn-margin-right">立即加入</a> 
+                        
+                        <div class="logo-placeholder floating-logo" style="position:absolute;left:50%;top:128%"><img src="<?php echo SRC_TPL_DIR?>/images/gd.png"></div>
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+<!--跑分-->    
+     <section class="row section">
+          <div class="row-content buffer even clear-after">
+            <div class="column three">
+              <div class="count-item">
+                <div class="small-icon red"><i><img src="<?php echo SRC_TPL_DIR?>/images/two-01.png"></i></div>
+                <div class="count-number" data-from="0" data-to="1583" data-speed="1000" data-refresh-interval="25"></div>
+                <div class="count-subject">与我们合作的网站主</div>
+              </div><!-- count-item -->
+            </div>
+            <div class="column three">
+              <div class="count-item">
+                <div class="small-icon red"><i><img src="<?php echo SRC_TPL_DIR?>/images/two-02.png"></i></div>
+                <div class="count-number" data-from="0" data-to="215" data-speed="1500" data-refresh-interval="25"></div>
+                <div class="count-subject">与我们合作的广告主</div>
+              </div><!-- count-item -->
+            </div>
+            <div class="column three">
+              <div class="count-item">
+                <div class="small-icon red"><i><img src="<?php echo SRC_TPL_DIR?>/images/two-03.png"></i></div>
+                <div class="count-number" data-from="0" data-to="266" data-speed="2000" data-refresh-interval="25"></div>
+                <div class="count-subject">收到的用户好评数</div>
+              </div><!-- count-item -->
+            </div>
+            <div class="column three last">
+              <div class="count-item">
+                <div class="small-icon red"><i><img src="<?php echo SRC_TPL_DIR?>/images/two-04.png"></i></div>
+                <div class="count-number" data-from="0" data-to="851" data-speed="2500" data-refresh-interval="25"></div>
+                <div class="count-subject">总累计合作用户</div>
+              </div><!-- count-item -->
+            </div><div class="clear"></div>
+          </div>  
+  </section>
+    
+    
+<section class="features-extra section-padding" id="assets" style="overflow:hidden">
+        <div class="macbook-wrap animated fadeInLeft"></div>
+        <div class="responsive-feature-img"><img src="<?php echo SRC_TPL_DIR?>/images/devices.png" alt="responsive devices"></div>
+
+        <div class="container jm-wz">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-7">
+                    <div class="feature-list text-center">
+                        <h3>网站主、广告主的最佳赚钱平台</h3>
+            <h3>你还在等什么？</h3>
+                        <i></i>
+
+                        <a href="/index.php?e=index.register" class="btn btn-ghost btn-accent btn-small">现在加入</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+    
+<!--合作伙伴--> 
+  <section class="bg-color">
+      <div class="container hzhb">
+          <div class="row hz-bt text-center">
+              <h3>合作伙伴</h3>
+                <span></span>
+            </div>
+            <div class="row text-center hz-img">
+              <img class="col-md-2" src="<?php echo SRC_TPL_DIR?>/images/hz-01.png">
+                <img class="col-md-2" src="<?php echo SRC_TPL_DIR?>/images/hz-02.png">
+                <img class="col-md-2" src="<?php echo SRC_TPL_DIR?>/images/hz-03.png">
+                <img class="col-md-2" src="<?php echo SRC_TPL_DIR?>/images/hz-04.png">
+                <img class="col-md-2" src="<?php echo SRC_TPL_DIR?>/images/hz-05.png">
+                <img class="col-md-2" src="<?php echo SRC_TPL_DIR?>/images/hz-06.png">
+            </div>
+       </div>
+  
+     </section>   
+     
+<!--底部--> 
+
+    
+    <?php TPL::display('footer');?>
+    
+
+    <script>window.jQuery || document.write('<script src="/templates/index/def/static001/jquery-1.11.2.min.js"><\/script>')</script><script src="<?php echo SRC_TPL_DIR?>/images/jquery-1.11.2.min.js"></script>    
+    <script src="<?php echo SRC_TPL_DIR?>/images/jquery.fancybox.pack.js"></script>
+    <script src="<?php echo SRC_TPL_DIR?>/images/bootstrap.min.js"></script>
+    <script src="<?php echo SRC_TPL_DIR?>/images/scripts.js"></script>
+    <script src="<?php echo SRC_TPL_DIR?>/images/jquery.flexslider-min.js"></script>  
+    <script src="<?php echo SRC_TPL_DIR?>/images/jquery.waypoints.min.js"></script>
+    <script src="<?php echo SRC_TPL_DIR?>/images/beetle.js"></script>
+    <script src="<?php echo SRC_TPL_DIR?>/images/plugins.js"></script>
+    
+    <script>
+        // zhiding 按钮点击后移除 focus 样式
+        $(document).ready(function() {
+            $('.zhiding').on('click', function() {
+                $(this).blur(); // 移除焦点，消除蓝色边框
+            });
+            
+            // dropdown-toggle 按钮点击后移除 focus 样式
+            $('.my-btnStyle .dropdown-toggle').on('click', function() {
+                var $btn = $(this);
+                setTimeout(function() {
+                    $btn.blur(); // 移除焦点，消除置灰效果
+                }, 100);
+            });
+        });
+    </script>
+
+</body></html>

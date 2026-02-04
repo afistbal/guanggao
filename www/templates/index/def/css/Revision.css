@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+/*网站主css*/
+	#why{
+		width:100%;
+		margin:0 auto;
+		height:595px;
+		background:url(../images/site_why_bg.png) bottom center no-repeat;
+		margin-top:60px;
+		}
+	#why .title{
+		text-align:center;
+		color:#FFF;
+		font-size:36px;
+		padding-top:60px;
+		}
+	.title span{
+		font-weight:bold;
+		}
+	.whybox{
+		width:1200px;
+		margin:0 auto;
+		color:#FFF;
+		overflow:hidden;
+		margin-top:40px;
+		}
+	.whybox div{
+		float:left;
+		}
+	.whybox p{
+		font-size:13px;
+		width:310px;
+		margin-top:10px;
+		line-height:22px;
+		word-spacing:3px;
+		letter-spacing: 1px;
+		}
+	.left_test h4{
+		font-size:22px;
+		text-align:right;
+		margin-right:14px;
+		}
+	.whybox .left_test{
+		width:320px;
+		margin-top:20px;
+		}
+	.center_img{
+		display:block;
+		width:469px;
+		height:337px;
+		background:url(../images/site_why_img.png) top center no-repeat;
+		margin-left:40px;
+		}
+	.whybox .right_test{
+		width:320px;
+		float:right;
+		margin-top:20px;
+		}
+	.right_test h4{
+		font-size:24px;
+		}
+	.toph2{
+		margin-top:40px;
+		}
+	
+/*开发者css*/
+	
+	.sdkbox{
+		overflow:hidden;
+		width:1200px;
+		margin:0 auto;
+		margin-top:20px;
+		}
+	.sdkbox h1{
+		font-size:16px;
+		color:#747474;
+		margin-top:6px;
+		}
+	.sdkbox .left_sdk{
+		float:left;
+		width:360px;
+		margin-left:20px;
+		margin-top:160px;
+		}
+	.left_sdk h3{
+		font-size:24px;
+		color:#434343;
+		background:url(h3_bg.png) center right no-repeat;
+		}
+	.sdkbox .sdk_center_img{
+		float:left;
+		background:url(sdk_img.png) top center no-repeat;
+		width:456px;
+		height:813px;
+		}
+	.sdkbox .right_sdk{
+		float:left;
+		width:360px;
+		margin-top:160px;
+		}
+	.right_sdk h3{
+		font-size:24px;
+		color:#434343;
+		background:url(h3_bg.png) center left no-repeat;
+		text-align:right
+		}
+	.right_sdk h1{
+		text-align:right
+		}
+	.sdk_test_box{
+		height:240px;
+		}

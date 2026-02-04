@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>首页</title>
+    <link rel="shortcut icon" href="images/icon_logo.png">
+    <link rel="icon" type="image/png" href="images/icon_logo.png">
+    
+    <!-- CSS 引用 -->
+    <link rel="stylesheet" href="images/bootstrap.min.css">
+    <link rel="stylesheet" href="images/flexslider.css">
+    <link rel="stylesheet" href="images/styles.css">
+    <link rel="stylesheet" href="images/animate.min.css">
+    
+    <style>
+        .my-btnStyle{
+            position:fixed;
+            bottom:10%;
+            right:10%;
+            z-index:9999;
+        }
+        .my-btnStyle button{
+            width:62px;
+            height:62px;
+            border:none;
+            background:rgba(255,100,69,0.6);
+            cursor:pointer;
+            border-radius:50% !important;
+            display:block;
+            margin-bottom:10px;
+        }
+        .my-btnStyle button img{
+            margin:0 auto;
+            display:block;
+        }
+        .my-btnStyle .dropdown-menu{
+            display:none;
+            position:absolute;
+            bottom:100%;
+            right:0;
+            min-width:200px;
+            padding:15px;
+            background:#fff;
+            border:1px solid #ddd;
+            border-radius:4px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom:10px;
+            list-style:none;
+        }
+        .my-btnStyle.open .dropdown-menu{
+            display:block;
+            animation:.3s linear fadeIn;
+        }
+        .my-btnStyle .dropdown-menu h5{
+            font-size:18px;
+            color:#3d4351;
+            margin:0 0 10px 0;
+            padding:0;
+        }
+        .my-btnStyle .dropdown-menu li{
+            list-style:none;
+            padding:5px 0;
+        }
+        .my-btnStyle .dropdown-menu li a{
+            text-decoration:none;
+            display:block;
+            padding:8px;
+            color:#3d4351;
+            cursor:pointer;
+        }
+        .my-btnStyle .dropdown-menu li a:hover{
+            background:#f5f5f5;
+        }
+        .my-btnStyle .dropdown-menu img{
+            margin:5px;
+            display:inline-block;
+            vertical-align:middle;
+        }
+        .my-btnStyle .dropdown-menu span{
+            line-height:30px;
+            color:#3d4351;
+            margin-left:5px;
+        }
+        .my-btnStyle .zhiding{
+            background:rgba(73,80,97,0.6);
+            outline: none;
+            border: none;
+            border-radius:50% !important;
+        }
+        .my-btnStyle .zhiding:hover{
+            background:rgba(73,80,97,1);
+        }
+        .my-btnStyle .zhiding:focus,
+        .my-btnStyle .zhiding:active,
+        .my-btnStyle .zhiding:focus-visible {
+            outline: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            border-radius:50% !important;
+        }
+        /* 移除 dropdown-toggle 按钮的置灰效果 */
+        .my-btnStyle .dropdown-toggle {
+            outline: none;
+            border: none;
+            border-radius:50% !important;
+        }
+        .my-btnStyle .dropdown-toggle:hover {
+            background:rgba(255,100,69,0.8);
+        }
+        .my-btnStyle .dropdown-toggle:focus,
+        .my-btnStyle .dropdown-toggle:active,
+        .my-btnStyle .dropdown-toggle.active,
+        .my-btnStyle .dropdown-toggle:focus-visible,
+        .my-btnStyle.open .dropdown-toggle {
+            background:rgba(255,100,69,0.6) !important;
+            outline: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            border-radius:50% !important;
+        }
+        
+        @keyframes fadeIn{
+            0%{
+                opacity:0;
+                transform:translateX(-20px);
+            }
+            100%{
+                opacity:1;
+                transform:translateX(0px);
+            }
+        }
+        .fukuang {
+            position: relative;
+        }
+    </style>
+    <style type="text/css">.fancybox-margin{margin-right:0px;}</style>
+    <style>.fluidvids-elem{position:absolute;top:0px;left:0px;width:100%;height:100%;}.fluidvids{width:100%;position:relative;}</style>
+    <style>
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body id="top">
+    <!--浮窗-->   
+    <div class="container fukuang">
+        <div class="dropup my-btnStyle">
+            <ul class="dropdown-menu text-center">
+                <h5 class="text-center">客服人员</h5>
+                <li><a href="https://t.me/dandan" target="_blank" style="cursor:pointer;"><img width="18" height="18" src="images/telegram.png"><span>客服：蛋蛋</span></a></li>
+                <li><a href="https://t.me/doudou" target="_blank" style="cursor:pointer;"><img width="18" height="18" src="images/telegram.png"><span>客服：豆豆</span></a></li>
+                <li><a href="https://t.me/bingbing" target="_blank" style="cursor:pointer;"><img width="18" height="18" src="images/telegram.png"><span>客服：冰冰</span></a></li>
+                <li><a href="https://t.me/guoguo" target="_blank" style="cursor:pointer;"><img width="18" height="18" src="images/telegram.png"><span>商务：果果</span></a></li>
+                <li><a href="https://t.me/xiaowang" target="_blank" style="cursor:pointer;"><img width="18" height="18" src="images/telegram.png"><span>质监佣金：小王</span></a></li>
+            </ul>
+            <button class="btn btn-default dropdown-toggle" type="button" id="telegramBtn">
+                <img src="images/TG.png" alt="Telegram客服">
+            </button>
+            <a href="javascript:scroll(0,0)">
+                <button class="btn zhiding" type="button">
+                    <img src="images/zhiding.png" alt="返回顶部">
+                </button>
+            </a>
+        </div>
+    </div>
+    
+    <!--头部-->    
+    <section class="hero">
+        <section class="navigation">
+            <header class="fixed-header">
+                <div class="header-content">
+                    <div class="logo"><a href="/index.php"><img src="images/logo.png" alt="logo"></a></div>
+                    
+                    <div class="header-nav">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="/index.php" style="color:#ff7458;">首页</a></li>
+                                <li><a href="affiliate.html">网站主</a></li>
+                                <li><a href="advertiser.html">广告主</a></li>
+                                <li><a href="help.html">常见问题</a></li>
+                                <li><a href="contact.html">联系联盟</a></li>
+                                <li><a href="register.html">在线申请</a></li>
+                            </ul>
+                            <ul class="member-actions">
+                                <li><a href="login.html" class="login">登录</a></li>
+                                <li><a href="register.html" class="btn-white btn-small">注册</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="navicon">
+                        <a class="nav-toggle" href="/index.php"><span></span></a>
+                    </div>
+                </div>
+            </header>
+        </section>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="hero-content text-center">
+                        <h1>海森广告 · 一站式移动广告平台</h1>
+                        <p class="intro">丰富的广告模式提升用户的收益转化、最佳的流量变现方案(通栏、插屏、跳转)、丰富的网络广告<br>投放经验帮助品牌瞬间传递！</p>
+                        <a href="register.html" class="btn btn-fill btn-large btn-margin-right">立即加入</a> 
+                        
+                        <div class="logo-placeholder floating-logo" style="position:absolute;left:50%;top:128%"><img src="images/gd.png"></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--跑分-->    
+    <section class="row section">
+        <div class="row-content buffer even clear-after">
+            <div class="column three">
+                <div class="count-item">
+                    <div class="small-icon red"><i><img src="images/two-01.png"></i></div>
+                    <div class="count-number" data-from="0" data-to="1583" data-speed="1000" data-refresh-interval="25"></div>
+                    <div class="count-subject">与我们合作的网站主</div>
+                </div>
+            </div>
+            <div class="column three">
+                <div class="count-item">
+                    <div class="small-icon red"><i><img src="images/two-02.png"></i></div>
+                    <div class="count-number" data-from="0" data-to="215" data-speed="1500" data-refresh-interval="25"></div>
+                    <div class="count-subject">与我们合作的广告主</div>
+                </div>
+            </div>
+            <div class="column three">
+                <div class="count-item">
+                    <div class="small-icon red"><i><img src="images/two-03.png"></i></div>
+                    <div class="count-number" data-from="0" data-to="266" data-speed="2000" data-refresh-interval="25"></div>
+                    <div class="count-subject">收到的用户好评数</div>
+                </div>
+            </div>
+            <div class="column three last">
+                <div class="count-item">
+                    <div class="small-icon red"><i><img src="images/two-04.png"></i></div>
+                    <div class="count-number" data-from="0" data-to="851" data-speed="2500" data-refresh-interval="25"></div>
+                    <div class="count-subject">总累计合作用户</div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>  
+    </section>
+    
+    <section class="features-extra section-padding" id="assets" style="overflow:hidden">
+        <div class="macbook-wrap animated fadeInLeft"></div>
+        <div class="responsive-feature-img"><img src="images/devices.png" alt="responsive devices"></div>
+
+        <div class="container jm-wz">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-7">
+                    <div class="feature-list text-center">
+                        <h3>网站主、广告主的最佳赚钱平台</h3>
+                        <h3>你还在等什么？</h3>
+                        <i></i>
+                        <a href="register.html" class="btn btn-ghost btn-accent btn-small">现在加入</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--合作伙伴--> 
+    <section class="bg-color">
+        <div class="container hzhb">
+            <div class="row hz-bt text-center">
+                <h3>合作伙伴</h3>
+                <span></span>
+            </div>
+            <div class="row text-center hz-img">
+                <img class="col-md-2" src="images/hz-01.png">
+                <img class="col-md-2" src="images/hz-02.png">
+                <img class="col-md-2" src="images/hz-03.png">
+                <img class="col-md-2" src="images/hz-04.png">
+                <img class="col-md-2" src="images/hz-05.png">
+                <img class="col-md-2" src="images/hz-06.png">
+            </div>
+        </div>
+    </section>
+    
+    <!--底部--> 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="footer-links">
+                        <ul class="footer-group">
+                            <li><a href="index.html">首页</a></li>
+                            <li><a href="affiliate.html">网站主</a></li>
+                            <li><a href="advertiser.html">广告主</a></li>
+                            <li><a href="help.html">常见问题</a></li>
+                            <li><a href="register.html">在线申请</a></li>
+                            <li><a href="login.html">登陆中心</a></li>
+                        </ul>
+                    </div>
+                    <p>Copyright © 2025-2027 海森广告 版权所有 </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript 引用 -->
+    <script src="images/jquery-1.11.2.min.js"></script>
+    <script src="images/jquery.fancybox.pack.js"></script>
+    <script src="images/bootstrap.min.js"></script>
+    <script src="images/scripts.js"></script>
+    <script src="images/jquery.flexslider-min.js"></script>  
+    <script src="images/jquery.waypoints.min.js"></script>
+    <script src="images/beetle.js"></script>
+    <script src="images/plugins.js"></script>
+    
+    <script>
+        // 页面加载完成后初始化
+        $(document).ready(function() {
+            // 浮窗下拉菜单控制
+            $('#telegramBtn').on('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                $(this).closest('.dropup').toggleClass('open');
+            });
+            
+            // 点击外部关闭菜单
+            $(document).on('click', function(e) {
+                if (!$(e.target).closest('.dropup').length) {
+                    $('.dropup').removeClass('open');
+                }
+            });
+            
+            // zhiding 按钮点击后移除 focus 样式
+            $('.zhiding').on('click', function() {
+                $(this).blur(); // 移除焦点，消除蓝色边框
+            });
+            
+            // dropdown-toggle 按钮点击后移除 focus 样式
+            $('.my-btnStyle .dropdown-toggle').on('click', function() {
+                var $btn = $(this);
+                setTimeout(function() {
+                    $btn.blur(); // 移除焦点，消除置灰效果
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+/*登陆页*/
+body.w1920 {background: white url(../images/xq.jpg) no-repeat center bottom;}
+
+html, body {margin: 0;padding: 0;height: 100%;min-width: 1000px;min-height: 900px;}
+body {
+background-color: whiteSmoke;
+width: 100%;
+min-width: 1004px;
+width: expression(document.body.clientWidth <= 1004? "1004px": "auto");
+}
+body, button, input, select, textarea, p {
+color: #515151;
+font: 13px/26px 'Gotham','Microsoft YaHei',Simhei,helvetica, verdana,arial,宋体;
+}
+#page {
+position: relative;
+height: auto !important;
+height: 100%;
+}
+#page {
+width: 1006px;
+margin-left: auto;
+margin-right: auto;
+}
+.inputarea {
+margin-left: auto;
+margin-right: auto;
+padding-top: 120px;
+width: 400px;
+}
+form {
+background-color: white;
+position: relative;
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.title {
+margin-bottom: 50px;
+}
+.tips {
+padding-top: 20px;
+height: 70px;
+border-top: 2px solid #231228;
+}
+.title p {
+height: 55px;
+}
+.title h1 {
+font-weight: normal;
+padding-left: 50px;
+}
+.home {
+float: right;
+margin-top: 15px;
+margin-right: 15px;
+width: 40px;
+height: 40px;
+background: url(../images/home-1.png) no-repeat 0 0;
+}
+a {
+color: dimGray;
+text-decoration: none;
+}
+.f30px {
+font-size: 30px;
+}
+.title .identity {
+padding-left: 20px;
+}
+.f24px {
+font-size: 24px;
+}
+.title h1 {
+font-weight: normal;
+}
+#hold {
+margin-left: 60px;
+float: left;
+margin: 5px 10px 10px 50px;
+width: 15px;
+height: 15px;
+}
+.bgnone {
+background: url(../images/sprite-2.gif) no-repeat 0px -585px;
+}
+input {
+color: #777;
+font-weight: bold;
+font-size: 13px;
+height: 50px;
+width: 260px;
+border: none;
+display: block;
+margin-left: 90px;
+overflow: hidden;
+}
+.btn {
+float: right;
+cursor: pointer;
+margin-right: 50px;
+font-size: 12px;
+color: white;
+width: 95px;
+height: 30px;
+background-color: #96C3CF;
+border: 1px solid #79B0BF;
+border-radius: 4px 4px;
+box-shadow: 1px 1px 2px #CCC;
+}
+.shadow {
+text-shadow: 0px 2px rgba(0, 0, 0, 0.3);
+filter: none	9;
+-filter: dropshadow(offx=1, offy=1, color=#666666);
+zoom: 1;
+}
+.tips h1, .tips h2 {
+font-weight: normal;
+padding-left: 50px;
+margin: 0;
+}
+.tips h2 {
+font-size: 13px;
+}
+.dotted {
+border-bottom: 1px dotted;
+}
+.blue {
+color: #88BBC8;
+}
+.inputlist {
+height: 50px;
+margin-bottom: 30px;
+position: relative;
+}
+.warn_box {
+visibility: hidden;
+width: 120px;
+position: absolute;
+right: 13px;
+margin-top: -20px;
+height: 40px;
+text-align: center;
+}
+.email_box {
+background-position: 50px -74px;
+}
+.input_box {
+height: 50px;
+overflow: hidden;
+background-image: url(../images/sprite-2.gif);
+background-repeat: no-repeat;
+}
+.warn {
+background-color: #555;
+width: 120px;
+color: white;
+line-height: 28px;
+height: 28px;
+border-radius: 2px 2px;
+box-shadow: -1px 2px 2px rgba(150, 150, 150, 0.2);
+margin: 0;
+}
+.angle {
+width: 120px;
+background: url(../images/angle.gif) no-repeat 50% 0;
+height: 7px;
+margin: 0;
+}
+.input_email_n {
+background: url(../images/sprite-2.gif) no-repeat -40px -74px;
+}
+.input_password_n {
+background: url(../images/sprite-2.gif) no-repeat -40px -174px;
+}
+.password_box {
+background-position: 50px -174px;
+}
+
+.input_active {
+background: url(../images/sprite-2.gif) no-repeat 0 -124px;
+}
+
+.input_error1 {
+background: url(../images/sprite-2.gif) no-repeat -40px -224px;
+}
+
+.input_correct {
+background: url(../images/sprite-2.gif) no-repeat -40px -274px;
+}
+
+#yzm {height: 40px; margin-bottom: 20px;}
+
+.yan {width: 145px; background: url(../images/yan.png) no-repeat; height: 40px; float: left;margin-left: 50px;}
+
+.regcode {width: 100px; margin: 1px 0 0 43px; height: 36px; line-height: 36px; border: none;}
+
+.dotted-1 {
+float: left;
+line-height: 35px;
+text-align: center;
+cursor: pointer;
+margin-right: 20px;
+font-size: 12px;
+width: 101px;
+padding: 0;
+height: 32px;
+text-decoration: none;
+border: 1px solid #d07300;
+background-color: #ff9e24;
+border-radius: 4px 4px;
+margin-left: 50px;
+}

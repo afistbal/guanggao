@@ -134,7 +134,7 @@ class jump
 
 	public function to_ulr($url = '')
 	{
-		if ($_GET['srccpv']) {
+		if (!empty($_GET['srccpv'])) {
 			exit();
 		}
 
@@ -147,13 +147,54 @@ class jump
 		}
 
 		$urlhost = parse_url($url);
+		$ua = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
 
-		if (!$urlhost['scheme']) {
-			$url = 'http://' . $this->a['url'];
+		// 检查是否有协议（兼容 parse_url 返回 false 的情况）
+		$has_scheme = (is_array($urlhost) && isset($urlhost['scheme']) && $urlhost['scheme']);
+		
+		if (!$has_scheme) {
+			// 优先使用 HTTPS（Android 高版本对 HTTPS 跳转成功率更高）
+			// 如果当前请求是 HTTPS，或检测到移动端，优先使用 https://
+			$is_https = (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] === 'on' || $_SERVER['HTTPS'] === '1')) || 
+			            (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') ||
+			            (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443);
+			
+			// 移动端优先 HTTPS，PC 端根据当前协议
+			$is_mobile = preg_match('/(android|iphone|ipad|ipod|mobile|blackberry|windows phone)/i', $ua);
+			
+			if ($is_https || $is_mobile) {
+				$url = 'https://' . $url;
+			} else {
+				$url = 'http://' . $url;
+			}
 		}
 
 		$url = str_replace(array('{uid}', '{adsid}', '{siteid}', '{zoneid}'), array($this->u['uid'], $this->a['adsid'], $this->o['siteid'], $this->o['zoneid']), $url);
-		Header('Location: ' . $url);
+
+		$is_wechat = strpos($ua, 'MicroMessenger') !== false;
+		$is_qq = (strpos($ua, 'QQ/') !== false || strpos($ua, 'MQQBrowser') !== false || strpos($ua, 'QQBrowser') !== false);
+
+		// 禁缓存（国产浏览器非常关键）
+		header("Cache-Control: no-store, no-cache, must-revalidate");
+		header("Pragma: no-cache");
+		header("Expires: 0");
+
+		// 微信/QQ：用户触发优先（不用302，只用HTML+JS+onclick）
+		if ($is_wechat || $is_qq) {
+			http_response_code(200);
+			echo "<!doctype html>
+<html><head><meta charset='utf-8'></head>
+<body onclick=\"location.href='" . htmlspecialchars($url, ENT_QUOTES) . "'\">
+<script>
+setTimeout(function(){ location.href=" . json_encode($url) . "; }, 300);
+</script>
+<div style='display:none'>跳转中</div>
+</body></html>";
+			exit();
+		}
+
+		// 普通浏览器：只用302跳转（不混用JS+META）
+		header("Location: " . $url, true, 302);
 		exit();
 	}
 

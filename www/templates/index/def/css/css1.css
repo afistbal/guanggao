@@ -1,0 +1,247 @@
+﻿/* CSS Document */
+/*html,body{overflow-x:hidden !important;}*/
+body{ margin:0 auto 10px; padding:0; border:0; font-family:Arial, Helvetica, sans-serif; font-size:12px;font-family:"Microsoft YaHei";}
+div,form,dl,dd,dt,ul,li,p,img,a,span,pp,s1,s2,s3,s4,input{ list-style:none; margin:0; padding:0; border:0; }
+h1,h2,h3,h4,h5,h6,h7,h8{ margin:0; padding:0; font-family:"Microsoft YaHei"; font-size:12px; font-weight:normal; }
+em{ font-style:normal;}
+img{ border:none; vertical-align:middle;}
+input{ vertical-align:middle;}
+.clear{ clear: both; font-size:0px; line-height:0px; font-size:0px; height:0; overflow: hidden; width:100%; _float:left;}
+.hide{display: none}
+
+/*说明图片样式*/
+#stepBox{ background:#fff; width:100%; margin-bottom:28px;padding-top:402px;}
+
+
+.step,.main,.contact{ margin:0 auto; width:1000px;}
+
+/*主体内容样式*/
+#mainBox{ width:100%;border-top:1px solid #e3e3e3; background:url(/images2/main_bg.png) 0 0 repeat-x #fff;float:left;}
+.main{ position:relative;}
+.jt_up{ position:absolute; top:-11px; left:60px; overflow:hidden; font-size:0px;}
+
+/*常见问题左侧列表样式*/
+.main .left{ float:left; width:690px; overflow:hidden;}
+.left .titleL{ width:100%; margin-top:20px; border-bottom:1px solid #e9e9e9; padding-bottom:10px;position:relative;}
+.left .titleL span.jt{position:absolute; bottom:-5px; left:25px; font-size:0px; overflow:hidden;}
+.list{ float:left; width:100%; clear:both;}
+.list .list_up{left:20px; position:absolute; top:-11px; overflow:hidden; font-size:0px;}
+.list h3{ color:#03a8de; font-size:20px; margin:20px 0px;_margin:15px 0px; height:30px; line-height:30px;}
+.list .cont{ background:#fbfbfb; border:1px solid #ebebeb; padding:12px 15px 0px;position:relative; float:left;}
+.list .cont ul li{ line-height:24px; border-top:1px dotted #9d9c9a; padding:10px 0px;padding-bottom:8px; width:300px; float:left;}
+.list .cont ul li a{color:#434343; text-decoration:none; font-size:14px;}
+.list .cont ul li a:hover{color:#0087d2; text-decoration:underline;}
+.list .cont .listT{ color:#434343; font-size:14px; display:block; background:url(/images2/news_ico.gif) no-repeat left center;}
+.list .cont .listJ{color:#8d8d8d; display:block;font-size:14px !important;}
+.list .cont .listDate{color:#c5c5c5;}
+
+/*通用时间和客服样式*/
+
+.main .right{ float:right; width:250px;overflow: hidden;}
+.main .right .ggzin{margin-top: 25px;display: block;width: 268px;height: 81px;background: url(/images2/ggz-1.png) 0 0 no-repeat;}
+.main .right .ggzin:hover{background-image: url(/images2/ggz-2.png);}
+.main .right .wzzin{margin-top: 25px;display: block;width: 268px;height: 81px;background: url(/images2/wzz-1.png) 0 0 no-repeat;}
+.main .right .wzzin:hover{background-image: url(/images2/wzz-2.png);}
+#adjust{margin-top: 20px;}
+.time{ background:url(/images2/clock.png) no-repeat 0 0; width:180px; float:left; margin:45px 0px 10px; border-bottom:1px dotted #9d9c9a;padding-bottom:10px;}
+.time{color:#00bfe6; font-size:18px; padding-left:90px;}
+.time ul li.timeT{ font-size:24px; font-family:Arial, Helvetica, sans-serif;}
+.time ul li.timeS{ font-size:20px; font-family:Impact; color:#646464;}
+
+.kf{ float:left; width:100%;}
+.kf .kflist{ float:left; margin-bottom:10px;}
+.kf .kflist h3{ float:left;position:relative;z-index:999;background:url(/images2/t_bg.png) #03a8de no-repeat 50px center; width: 250px; height:38px; line-height:38px; font-size:16px; text-align:center; color:#fff; margin-bottom:15px;
+-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;behavior:url(http://union.5293.com/templates/index/demo/js/PIE.htc);overflow: hidden;background:url(/images2/t_bg.gif) #03a8de no-repeat 40px  center;}
+
+.kf .kflist li{ float:left;margin-right:12px;margin-bottom:10px; _display:inline; width: 118px;text-align: center;height: 22px;line-height: 22px;background: url(/images2/right-7.png) 0 0 no-repeat;}
+.kf .kflist li a{color: #005076;text-decoration: none;}
+.kf .kflist li a:hover{text-decoration: underline;color: #232323;}
+.kf .kflist li.no{margin-right:0;}
+
+
+/*联系和地址样式*/
+#contactBox{background:#f6f6f6;behavior:url(http://union.5293.com/templates/index/demo/js/PIE.htc);box-shadow: rgba(3, 168, 222, 0.44) 0px -4px 4px; height:98px; overflow:hidden; margin-top:60px;_margin-top:50px;}
+#contactBox .contact{color:#999999;}
+#contactBox .contact a{color:#999; text-decoration:none;}
+#contactBox .contact a:hover{color:#0087d2; text-decoration:underline;}
+#contactBox .contact strong{ font-size:16px; color:#1d1d1d; display:block;margin-top:5px;}
+#contactBox .lx{float:left; width:1000px;background:url(/images2/bg.png) 0 -57px no-repeat; font-size:14px; height:50px; padding-left:60px;margin-top:25px;}
+#contactBox .addr{float:right; width:305px;background:url(/images2/bg.png) 0 0px no-repeat; height:50px; padding-left:60px;margin-top:25px;}
+
+
+
+/*关于我们开始*/
+.about{ padding:25px 0 0 0;}
+.about p{ text-indent:2em; line-height:30px; font-size:14px; color:#525252;}
+/*关于我们结束*/
+
+/*网站主开始*/
+.affiliate{ padding:0px 0 0 20px;}
+.affiliate li{ border-bottom:1px dashed #797876; padding:20px 0 0 0;}
+.affiliate .title{ background:url(/images2/aff.png) no-repeat 0 0; height:30px; padding:0 0 0 30px; line-height:22px; }
+.affiliate .title a,.affiliate .title a:link,.affiliate .title a:visited,.affiliate .title a:active{font:14px "Microsoft YaHei"; color:#434343; text-decoration:none;}
+/*.affiliate .title a:hover{ font:14px "Microsoft YaHei";color:#0087d2; text-decoration:underline; }
+*/.affiliate .ms{ background:url(/images2/aff.png) no-repeat 0 -57px; padding:0 0 10px 30px; line-height:22px; color:#8d8d8d; font-size:14px; }
+/*网站主结束*/
+
+/*广告模式开始*/
+.adver .title{ font-size:20px; color:#0087d2; height:36px; padding:20px 0 0 15px;}
+.adver .advList{ position:relative; background:#fbfbfb; border:1px solid #ebebeb; padding:16px 0 16px 0px;}
+.adver .icon{ left:20px; position:absolute; top:-11px; overflow:hidden; font-size:0px;}
+.adver ul{display:block;overflow:hidden;}
+.adver ul li{float:left;width:128px;height:127px;background:url(/images2/left-10.png) no-repeat;margin-right:22px; margin-left:22px; display:inline;}
+.adver ul li.no{margin-right:0}
+.adver ul li img{padding:13px;display:block;padding-bottom:10px}
+.adver ul li span{display:block;font-size:12px;color:#434343;padding-left:9px}
+.adver ul li span i{color:#0388ca; font-style:normal;}
+/*广告模式结束*/
+
+
+#header {
+    height: 80px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 16px;
+}
+
+#header .container {
+    overflow: hidden;
+    height: 100%;
+    width: 1000px;
+    margin: auto;
+}
+
+#header .container .logo {
+    float: left;
+    width: 25%;
+    height: 100%
+}
+
+#header .container .logo a {
+    display: block;
+    margin-top: 12px;
+    background: url(/images2/logoo.png) no-repeat;
+    width: 209px;
+    height: 58px;
+}
+
+#header .container .menu {
+    float: right;
+    width: 75%;
+    overflow: hidden;
+    height: 100%
+}
+
+#header .container .menu li {
+    float: left;
+    background: url(/images2/head-1.png) right center no-repeat;
+    height: 38px;
+    width: 12.5%;
+    *width: 12%;
+    line-height: 38px;
+    text-align: center;
+    margin-top: 19px
+}
+
+#header .container .menu li a {
+    width: 84px;
+    display: block;
+    height: 100%;
+    margin: auto;
+    color: #fff;
+    text-decoration: none;
+}
+
+#header .container .menu li a:hover {
+    background: url(/images2/head-2.png) 0 0 no-repeat
+}
+
+#header .container .menu li a.current {
+    background-image: url(/images2/head-2.png)
+}
+
+#header .container .menu li.no {
+    background-image: none
+}
+
+.subBannerArea{position: absolute;top: 0;left: 0;width: 100%;height: 384px;background: url(/images2/slider-1.png) left bottom repeat-x;z-index: 0;}
+.banner-1{width: 100%;height: 100%;background: url(/images2/banner4.jpg) center center no-repeat;}
+.banner-2{width: 100%;height: 100%;background: url(/images2/banner5.jpg) center center no-repeat;}
+.banner-3{width: 100%;height: 100%;background: url(/images2/banner7.jpg) center center no-repeat;}
+.banner-4{width: 100%;height: 100%;background: url(/images2/banner2.jpg) center center no-repeat;}
+.banner-5{width: 100%;height: 100%;background: url(/images2/banner3.jpg) center center no-repeat;}
+.banner-6{width: 100%;height: 100%;background: url(/images2/banner1.jpg) center center no-repeat;}
+
+.footer {
+    background-color: #1d1d1d;
+    text-align: center;
+    height: 72px;
+    overflow: hidden;
+    padding-top: 30px;
+    width: 100%
+}
+
+.footer .container {
+    font-size: 14px;
+    width: 1000px;
+    margin: auto;
+}
+
+.footer .container ul {
+    overflow: hidden;
+    padding-left: 241px
+}
+
+.footer .container ul li {
+    float: left;
+    background: url(/images2/foot-1.png) right center no-repeat;
+    height: 18px;
+    line-height: 18px
+}
+
+.footer .container ul li.last {
+    background-image: none
+}
+
+.footer .container ul li a {
+    padding: 0 12px;
+    color: #9f9f9f;
+    text-decoration: none;
+}
+
+.footer .container p {
+    color: #9f9f9f;
+    line-height: 280%;
+    clear: both
+}
+#conBox{width:100%;border-top:1px solid #e3e3e3; background:url(/images2/main_bg.png) 0 0 repeat-x #fff;float:left;}
+#conBox h3{height: 34px;padding-top: 25px;padding-left: 7px;font-size: 18px;color: #0087d2;}
+#conBox .unit{border:1px solid #ebebeb;background-color: #fbfbfb;position: relative;padding: 30px 20px;padding-bottom: 0;}
+#conBox .unit.item-1{overflow:hidden;margin-bottom: 2px;}
+#conBox .unit.item-2{overflow:hidden;}
+#conBox .unit li{float:left;margin:0 24px 22px 20px;width: 118px;text-align: center;
+height: 22px;
+line-height: 22px;
+background: url(/images2/right-7.png) 0 0 no-repeat;
+}
+#conBox .unit li.no{margin-right: 0;}
+#conBox .unit li a{color: #005076;text-decoration: none;}
+#conBox .unit li a:hover{text-decoration: underline;color: #232323;}
+#conBox .unit li.triangleTop{background-image: url(/images2/jt_up.png);position: absolute;width: 19px;height: 11px;top: -11px;left: 25px;margin: 0;padding: 0;border: none;}
+.friendslinks {margin-top: 30px}
+.friendslinks h3 {
+    padding-left:32px;
+    height:42px;
+    line-height:42px;
+    border-bottom:1px solid #e0e0e0;
+    background:url(/images2/bg_flinks.jpg) left center no-repeat !important
+}
+.friendslinks ul{margin-top: 10px;margin-bottom: 10px}
+.friendslinks li{margin-right: 20px;float: left}
+.friendslinks li a{font:100 12px/2 'simsun';color:#4A4A4A;}
+.friendslinks li a:hover{font:100 12px/2 'simsun';color:#C30002;}
+
